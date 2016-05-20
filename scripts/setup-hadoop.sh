@@ -9,7 +9,7 @@ function installLocalHadoop {
 
 function installRemoteHadoop {
 	echo "install hadoop from remote file"
-	curl -o /vagrant/resources/$HADOOP_ARCHIVE -O -L $HADOOP_MIRROR_DOWNLOAD
+	# curl -o /vagrant/resources/$HADOOP_ARCHIVE -O -L $HADOOP_MIRROR_DOWNLOAD
 	tar -xzf /vagrant/resources/$HADOOP_ARCHIVE -C /usr/local
 }
 
@@ -21,7 +21,7 @@ function setupHadoop {
 	mkdir /var/hadoop/mr-history
 	mkdir /var/hadoop/mr-history/done
 	mkdir /var/hadoop/mr-history/tmp
-	
+
 	echo "copying over hadoop configuration files"
 	cp -f $HADOOP_RES_DIR/* $HADOOP_CONF
 }

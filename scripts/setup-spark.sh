@@ -9,7 +9,7 @@ function installLocalSpark {
 
 function installRemoteSpark {
 	echo "install spark from remote file"
-	curl -o /vagrant/resources/$SPARK_ARCHIVE -O -L $SPARK_MIRROR_DOWNLOAD
+	# curl -o /vagrant/resources/$SPARK_ARCHIVE -O -L $SPARK_MIRROR_DOWNLOAD
 	tar -xzf /vagrant/resources/$SPARK_ARCHIVE -C /usr/local
 }
 
